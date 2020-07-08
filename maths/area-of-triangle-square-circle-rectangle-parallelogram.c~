@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#include<stdlib.h>
+int main()
+{
+    int choice;
+    printf("Choose the Option\n1 for triangle\n2 for square\n3 for circle\n4 for parallelogram\n");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+    {
+        
+        int a, b, c;
+        float s, area = 0;
+        printf("Enter the side of the triangle\n");
+        scanf("%d%d%d", &a, &b, &c);
+        s = (float)(a + b + c) / 2;
+        area = (float)(sqrt(s * (s - a) * (s - b) * (s - c)));
+        printf("The are of triangle of sides %d ,%d ,%d is %2.5f\n", a, b, c, area);
+        break;
+    }
+
+    default:
+        break;
+    }
+
+    return 0;
+}
